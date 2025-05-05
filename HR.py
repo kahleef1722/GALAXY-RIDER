@@ -130,6 +130,9 @@ def draw(player, elapsed_time, enemies, explosions):
     # Draw explosions
     for explosion in explosions:
         WIN.blit(explosion_img, (explosion[0], explosion[1]))
+    watermark_font = pygame.font.SysFont("Arial", 20)
+    watermark_text = watermark_font.render("SYED KHALEEFATHULLAH", True, (255, 255, 255, 128))
+    WIN.blit(watermark_text, (width - 200, height - 30))    
 
     pygame.display.update()
 
